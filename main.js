@@ -28,7 +28,7 @@ function relativeTime(time, time_text) {
     if (time_diff >= SEC_IN_HOUR && time_diff < SEC_IN_DAY) {
         let hours = Math.round(time_diff / SEC_IN_HOUR)
         return hours + " hora" +
-            ((hours != 1) ? "s" : "") + " ago"
+            ((hours != 1) ? "s" : "") + " atrás"
     }
     if (time_diff >= SEC_IN_DAY)
         return time_text
@@ -84,8 +84,8 @@ dateElem.appendChild(userLinkElem)
 albumcoverElem.src = imageLink
 
 console.log(
-    "Artist: " + artist + "\n" +
-    "Track: " + track + "\n" +
-    "Date: " + relative_time + "\n" +
-    "Now playing: " + now_playing + "\n" +
-    "Loved: " + loved)
+    "Artista: " + artist + "\n" +
+    "Faixa: " + track + "\n" +
+    "Data: " + relative_time + "\n" +
+    "Tocando: " + now_playing + "\n" +
+    "Curtida: " + loved)
