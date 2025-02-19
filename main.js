@@ -22,12 +22,12 @@ function relativeTime(time, time_text) {
 
     if (time_diff < SEC_IN_HOUR) {
         let minutes = Math.round(time_diff / SEC_IN_MIN)
-        return minutes + " minute" +
-            ((minutes != 1) ? "s" : "") + " ago"
+        return minutes + " minuto" +
+            ((minutes != 1) ? "s" : "") + " atrás"
     }
     if (time_diff >= SEC_IN_HOUR && time_diff < SEC_IN_DAY) {
         let hours = Math.round(time_diff / SEC_IN_HOUR)
-        return hours + " hour" +
+        return hours + " hora" +
             ((hours != 1) ? "s" : "") + " ago"
     }
     if (time_diff >= SEC_IN_DAY)
@@ -75,7 +75,7 @@ heartSpan.textContent = loved ? "❤️" : ""
 userLinkElem = document.createElement('a')
 userLinkElem.href = "https://www.last.fm/user/" + username
 userLinkElem.target = "_blank"
-userLinkElem.textContent = (relative_time != null) ? relative_time : "Now playing..."
+userLinkElem.textContent = (relative_time != null) ? relative_time : "Tocando agora..."
 
 trackElem.appendChild(trackLinkElem)
 trackElem.appendChild(heartSpan)
