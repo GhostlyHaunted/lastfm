@@ -73,7 +73,7 @@ heartSpan.id = 'heart'
 heartSpan.textContent = loved ? "❤️" : ""
 
 userLinkElem = document.createElement('a')
-userLinkElem.href = "https://www.last.fm/user/" + username
+userLinkElem.href = "https://www.last.fm/pt/user/" + username
 userLinkElem.target = "_blank"
 userLinkElem.textContent = (relative_time != null) ? relative_time : "Tocando agora..."
 
