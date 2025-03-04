@@ -26,12 +26,12 @@ html {
     font-family: 'Fira Code';
     font-size: 13px;
     color: white;
+    background-color: pink;
 }
 
 table {
     display: inline-block;
     vertical-align: middle;
-    background-color: pink;
 }
 
 .refresh {
