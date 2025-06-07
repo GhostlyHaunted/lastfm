@@ -75,7 +75,7 @@ heartSpan.textContent = loved ? "❤️" : ""
 userLinkElem = document.createElement('a')
 userLinkElem.href = "https://www.last.fm/pt/user/" + username
 userLinkElem.target = "_blank"
-userLinkElem.textContent = (relative_time != null) ? relative_time : "Tocando agora..."
+userLinkElem.textContent = (relative_time != null) ? relative_time : "Playing Now..."
 
 trackElem.appendChild(trackLinkElem)
 trackElem.appendChild(heartSpan)
