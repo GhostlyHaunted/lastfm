@@ -22,13 +22,13 @@ function relativeTime(time, time_text) {
 
     if (time_diff < SEC_IN_HOUR) {
         let minutes = Math.round(time_diff / SEC_IN_MIN)
-        return minutes + " minuto" +
-            ((minutes != 1) ? "s" : "") + " atrás"
+        return minutes + " minutes" +
+            ((minutes != 1) ? "s" : "") + " ago"
     }
     if (time_diff >= SEC_IN_HOUR && time_diff < SEC_IN_DAY) {
         let hours = Math.round(time_diff / SEC_IN_HOUR)
-        return hours + " hora" +
-            ((hours != 1) ? "s" : "") + " atrás"
+        return hours + " hour" +
+            ((hours != 1) ? "s" : "") + " ago"
     }
     if (time_diff >= SEC_IN_DAY)
         return time_text
