@@ -1,5 +1,5 @@
 // get your own last.fm api key from https://www.last.fm/api/account/create
-const LASTFM_API_KEY = "526f9f87b5c3ddb8bd0c86ed9b8c65e5"
+const LASTFM_API_KEY = "LASTFM_API_KEY"
 const username = "ghostly-lol" // change username here
 const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&extended=true&api_key=" + LASTFM_API_KEY + "&limit=1&user=" + username
 
