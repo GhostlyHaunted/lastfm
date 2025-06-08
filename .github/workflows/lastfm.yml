@@ -3,14 +3,14 @@ name: Use LastFM Key
 on: [push]
 
 jobs:
-  show-secret:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Show the secret (don’t worry, it stays hidden)
-        run: echo "Using Last.fm key: $LASTFM_API_KEY"
+      - name: Use Last.fm API key
         env:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+        run: echo "Using Last.fm API key: $LASTFM_API_KEY"
