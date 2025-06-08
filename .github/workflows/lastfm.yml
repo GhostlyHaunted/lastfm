@@ -1,6 +1,18 @@
-steps:
-  - name: Hello world action
-    with: # Set the secret as an input
-      super_secret: ${{ secrets.LASTFM_API_KEY }}
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.LASTFM_API_KEY }}
+name: Use LastFM Key
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show secret
+        run: |
+          echo "Running test"
+          echo "Last.fm API key is: $LASTFM_API_KEY"
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
