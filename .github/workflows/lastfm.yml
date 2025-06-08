@@ -1,0 +1,16 @@
+name: Use LastFM Key
+
+on: [push]
+
+jobs:
+  show-secret:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Show the secret (don’t worry, it stays hidden)
+        run: echo "Using Last.fm key: $LASTFM_API_KEY"
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
